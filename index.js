@@ -65,6 +65,7 @@ app.post("/auth/signin", async (req, res) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 });
+// CONNECTION_URL is from your MongoDb Cluster
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.CONNECTION_URL, {
